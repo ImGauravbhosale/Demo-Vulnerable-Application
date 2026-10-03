@@ -1,0 +1,16 @@
+name: MalwHunter dependency scan
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run MalwHunter
+        uses: ImGauravbhosale/Malwhunter@v0.1.0
+        with:
+          format: markdown
