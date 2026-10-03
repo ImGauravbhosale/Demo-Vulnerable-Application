@@ -2,9 +2,10 @@
   "name": "malwhunter-sca-demo",
   "version": "1.0.0",
   "private": true,
-  "description": "Demo repo proving MalwHunter (https://github.com/ImGauravbhosale/Malwhunter) catches a malware-shaped npm dependency inside a real GitHub Actions pipeline. Starts clean (this commit) — a follow-up PR will bump in a deliberately malware-shaped test package to show MalwHunter flag it live in CI.",
+  "description": "Demo repo proving MalwHunter (https://github.com/ImGauravbhosale/Malwhunter) catches a malware-shaped npm dependency inside a real GitHub Actions pipeline. This commit simulates a dependency update that introduces a malware-shaped package — MalwHunter's CI check should catch it and fail the build.",
   "dependencies": {
     "chalk": "5.3.0",
-    "left-pad": "1.3.0"
+    "left-pad": "1.3.0",
+    "@imgauravbhosale/malwhunter-ci-demo-fixture": "1.0.0"
   }
 }

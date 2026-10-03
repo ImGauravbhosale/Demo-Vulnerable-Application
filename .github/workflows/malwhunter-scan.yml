@@ -13,4 +13,10 @@ jobs:
       - name: Run MalwHunter
         uses: ImGauravbhosale/Malwhunter@v0.1.0
         with:
+          # The demo's "infected" dependency is a Recon-only fixture
+          # (no corroborating Detonation signal), so it resolves to
+          # `suspicious`, not `malicious` — fail-on has to be lowered
+          # to actually catch it. Real projects can leave this at the
+          # default (malicious) once they trust their dependency tree.
+          fail-on: suspicious
           format: markdown
